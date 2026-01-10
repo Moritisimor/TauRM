@@ -29,6 +29,9 @@ func main() {
 	} 
 
 	state := state.Initialize()
-	preprocessing.GatherLabels(program, state)
+	if err := preprocessing.GatherLabels(program, state); err != nil {
+		log.Fatalf("Preprocessing error: %s", err.Error())
+	}
+
 	interpreter.InterpreterLoop(program, state)
 }
