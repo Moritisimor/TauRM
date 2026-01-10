@@ -1,0 +1,7 @@
+ECHO Hello guys this is a demonstration for a simple program that counts.
+
+LOOP:
+    INC R0
+    ECHO R0
+    JMP LOOP # Counts infinitely with overflow
+    # Although jumping to absolute lines is possible, using labels is preferred for readability and maintainability.

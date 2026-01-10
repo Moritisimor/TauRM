@@ -1,0 +1,11 @@
+LOAD R0 1
+LOAD R1 62 # Loop Exit Condition
+
+ECHO R0
+LOOP_START:
+    ADD R0 R0 R0
+    ECHO R0
+    INC R2 # Counter
+    JIS R2 R1 LOOP_START
+
+ECHO Done

@@ -1,0 +1,21 @@
+LOAD R0 2
+LOAD R1 2
+
+JIE R0 R1 EQUAL_BRANCH
+JIS R0 R1 SMALLER_BRANCH
+JIG R0 R1 GREATER_BRANCH
+
+GREATER_BRANCH:
+    ECHO Register 0 is greater than register 1
+    JMP ANYHOW
+
+SMALLER_BRANCH:
+    ECHO Register 0 is smaller than register 1
+    JMP ANYHOW
+
+EQUAL_BRANCH:
+    ECHO Register 0 and 1 are equal
+    JMP ANYHOW
+
+ANYHOW:
+    ECHO That was the test, Bye!

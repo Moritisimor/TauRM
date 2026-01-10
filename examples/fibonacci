@@ -1,0 +1,18 @@
+ECHO Fibonacci Demonstration
+
+# Initialize Important Registers
+LOAD R1 0    # X
+LOAD R2 1    # Y
+LOAD R3 0    # Result
+LOAD R4 91   # Loop-Exit Condition
+LOAD R5 0    # Counter
+
+LOOP_START:
+    ADD R1 R2 R3 
+    ECHO R3
+    COPY R2 R1
+    COPY R3 R2
+    INC R5
+    JIS R5 R4 LOOP_START
+
+ECHO Done

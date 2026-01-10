@@ -1,0 +1,8 @@
+ECHO This is a demonstration for a simple counter
+LOAD R0 1   # Increment value
+LOAD R1 10  # Stopping condition
+LOAD R2 0   # Counter itself
+ADD R0 R2 R2
+ECHO R2
+JIS R2 R1 5
+ECHO Loop Done!
