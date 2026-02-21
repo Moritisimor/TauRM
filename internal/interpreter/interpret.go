@@ -29,6 +29,9 @@ func interpretCommand(state *state.State, command string) error {
 	case "copy":
 		err = memory.Copy(parts, state)
 
+	case "run":
+		err = output.Run(parts, state)
+
 	case "jmp":
 		err = controlflow.Jmp(parts, state)
 

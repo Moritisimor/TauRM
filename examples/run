@@ -1,0 +1,11 @@
+RUN R0 ls -a 
+ECHO R0
+JIE R1 R0 Success # This works because all registers are 0-initialized by default
+ECHO Running command did not work
+JMP Done
+
+Success:
+    ECHO Successfully ran command
+
+Done:
+    ECHO Demonstration is done
